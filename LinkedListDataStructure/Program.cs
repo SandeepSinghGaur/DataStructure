@@ -12,8 +12,8 @@ namespace LinkedListDataStructure
         {
             Console.WriteLine("Implement link List Data Structure");
             LinkedList list = new LinkedList();
-            Node firstNode=list.Add(56);
-            Node secondNode=list.Add(30);
+            Node firstNode=list.Add(30);
+            Node secondNode=list.Add(56);
             Node thirdNode=list.Add(70);
             list.Display();
         }
