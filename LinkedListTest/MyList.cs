@@ -65,5 +65,20 @@ namespace LinkedListTest
                     
             Assert.AreEqual(result, true);
         }
+        /// <summary>
+        /// Ability to delete the last  element in the LinkedList of sequence 56->30->70
+        /// </summary>
+        [Test]
+        public void givenLastElementWhenDeletedShouldPassLinkedListResult()
+        {
+            LinkedList list = new LinkedList();
+            Node firstNode = list.Add(30);
+            Node secondNode1 = list.Add(56);
+            Node thirdNode = list.Add(70);
+            list.RemoveLastNode();
+
+            bool result = firstNode.next.Equals(secondNode1);
+            Assert.AreEqual(result, true);
+        }
     } 
 }
