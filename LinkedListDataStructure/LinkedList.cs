@@ -34,6 +34,28 @@ namespace LinkedListDataStructure
             Console.WriteLine("Element Inserted into Linked List"+" " + node.data);
             return node;
         }
+        public Node Append(int data)
+        {
+            Node node = new Node(data);
+            if (this.head == null)
+                this.head = node;
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    if (temp.data == 56)
+                    {
+                        temp = temp.next;
+                        return node;
+                    }
+                }
+                temp.next = node;
+                Console.WriteLine("Element Inserted into Linked List" + " " + node.data);
+                
+            }
+            return node;
+        }
         /// <summary>
         /// Display node of The Link List
         /// </summary>
