@@ -83,6 +83,59 @@ namespace LinkedListDataStructure
                 }
             }
         }
+        public Node InsertAtPerticularPosition(int position,int data)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+                return head;
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(data);
+                newNode.next = this.head;
+                head = newNode;
+                return head;
+            }
+            else
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        head.next = node;
+                        return head.next;
+                        break;
+                    }
+                    head = head.next;
+                    return head;
+                }
+                if (position != 1)
+                {
+                    Console.WriteLine("Position out of Range");
+                    return head;
+                }
+                Console.WriteLine("Inserted Value is" + head);
+                return head;
+            }
+        }
+        public int SearchElement(int data)
+        {
+            int count = 0;
+            Node node = this.head;
+                while(node != null)
+                { 
+                    if (node.data == data)
+                    { 
+                        return count;
+                    }
+                    node = node.next;
+                    count++;
+                }
+            return count;
+        }
 
     }
 }
