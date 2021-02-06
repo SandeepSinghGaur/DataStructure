@@ -50,5 +50,20 @@ namespace LinkedListTest
 
             Assert.AreEqual(result, true);
         }
+        /// <summary>
+        /// Ability to delete the first  element in the LinkedList of sequence 56->30->70
+        /// </summary>
+        [Test]
+        public void given3FirstElementWhenDeletedShouldPassLinkedListResult()
+        {
+            LinkedList list = new LinkedList();
+            Node firstNode = list.Add(30);
+            Node secondNode1 = list.Add(56);
+            Node thirdNode = list.Add(70);
+            list.RemoveFirstNode();
+            bool result = secondNode1.next.Equals(thirdNode); 
+                    
+            Assert.AreEqual(result, true);
+        }
     } 
 }
