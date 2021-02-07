@@ -87,12 +87,25 @@ namespace LinkedListTest
         public void Given3ElementCheckPerticularElementPresentOrNot()
         {
             LinkedList list = new LinkedList();
-            Node firstNode = list.Add(30);
-            Node secondNode1 = list.Add(56);
+            Node firstNode = list.Add(50);
+            Node secondNode1 = list.Add(30);
             Node thirdNode = list.Add(70);
             bool checkElement = list.CheckElement(30);
             Assert.AreEqual(true,checkElement);
 
+        }
+        [Test]
+        public void Given3ElementInsertNewNodeAfterNOde30()
+        {
+            LinkedList list = new LinkedList();
+            Node firstNode = list.Add(56);
+            Node secondNode = list.Add(30);
+            Node thirdNode = list.Add(70);
+            int position = list.SearchElement(30);
+            Node fourthNode = list.InsertAtPerticularPosition(position + 1, 40);
+            bool result = firstNode.next.Equals(fourthNode) &&
+                    fourthNode.next.Equals(secondNode) && secondNode.next.Equals(thirdNode);
+            Assert.AreEqual(result, true);
         }
     } 
 }
