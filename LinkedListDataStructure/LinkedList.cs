@@ -121,20 +121,20 @@ namespace LinkedListDataStructure
                 return head;
             }
         }
-        public int SearchElement(int data)
+        public bool CheckElement(int data)
         {
             int count = 0;
             Node node = this.head;
                 while(node != null)
                 { 
                     if (node.data == data)
-                    { 
-                        return count;
+                    {
+                    return true; ;
                     }
                     node = node.next;
                     count++;
                 }
-            return count;
+            return false;
         }
         public Node RemoveFirstNode()
         {
@@ -160,6 +160,21 @@ namespace LinkedListDataStructure
             }
             newNode.next = null;
             return head;
+        }
+        public int SearchElement(int data)
+        {
+            int count = 0;
+            Node node = this.head;
+            while (node != null)
+            {
+                if (node.data == data)
+                {
+                    return count; ;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
         }
 
     }

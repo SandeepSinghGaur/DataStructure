@@ -80,5 +80,19 @@ namespace LinkedListTest
             bool result = firstNode.next.Equals(secondNode1);
             Assert.AreEqual(result, true);
         }
+        /// <summary>
+        ///  Search the given Node
+        /// </summary>
+        [Test]
+        public void Given3ElementCheckPerticularElementPresentOrNot()
+        {
+            LinkedList list = new LinkedList();
+            Node firstNode = list.Add(30);
+            Node secondNode1 = list.Add(56);
+            Node thirdNode = list.Add(70);
+            bool checkElement = list.CheckElement(30);
+            Assert.AreEqual(true,checkElement);
+
+        }
     } 
 }
