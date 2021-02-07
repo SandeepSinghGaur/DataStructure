@@ -27,6 +27,12 @@ namespace LinkedListDataStructure
             list.SortedLinkedList();
             //Console.WriteLine("Check Element Present or not" + " " +checkElement);
             list.Display();
+            Console.WriteLine();
+            LinkedListStack stack = new LinkedListStack();
+            stack.push(70);
+            stack.push(30);
+            stack.push(56);
+            stack.DisplayStack();
         }
     }
 }

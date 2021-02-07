@@ -9,7 +9,7 @@ namespace LinkedListTest
         /// Test the Order of the Node 30->56->70
         /// </summary>
         [Test]
-        public void Given3NumbersWhenLinkedShouldPassToLinkedList()
+        public void GivenThreeNumbers_WhenLinkedShouldPassTo_LinkedList()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(30);
@@ -22,7 +22,7 @@ namespace LinkedListTest
         /// Append a Node 56 after 30 so basically we Implement Append Functionality
         /// </summary>
         [Test]
-        public void given3NumbersWhenAppendedToLinkedListShouldAddedToLast()
+        public void GiveThreeNumbers_WhenAppendedToLinkedList_ShouldAddedToLast()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(30);
@@ -36,7 +36,7 @@ namespace LinkedListTest
         /// Ability to Insert30 Between 56 and 70
         /// </summary>
         [Test]
-        public void given3NumbersWhenInsertingSecondInBetweenShouldPassLinkedListResult()
+        public void GivenThreeNumbers_WhenInsertingSecondInBetween_ShouldPassLinkedListResult()
         {
 
             LinkedList list = new LinkedList();
@@ -54,7 +54,7 @@ namespace LinkedListTest
         /// Ability to delete the first  element in the LinkedList of sequence 56->30->70
         /// </summary>
         [Test]
-        public void given3FirstElementWhenDeletedShouldPassLinkedListResult()
+        public void GivenThreeFirstElement_WhenDeletedShouldPass_LinkedListResult()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(30);
@@ -69,7 +69,7 @@ namespace LinkedListTest
         /// Ability to delete the last  element in the LinkedList of sequence 56->30->70
         /// </summary>
         [Test]
-        public void givenLastElementWhenDeletedShouldPassLinkedListResult()
+        public void GivenLastElement_WhenDeletedShouldPass_LinkedListResult()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(30);
@@ -84,7 +84,7 @@ namespace LinkedListTest
         ///  Search the given Node
         /// </summary>
         [Test]
-        public void Given3ElementCheckPerticularElementPresentOrNot()
+        public void GivenThreeElement_CheckPerticularElement_PresentOrNot()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(50);
@@ -98,7 +98,7 @@ namespace LinkedListTest
         /// Insert a New Node 40 after the existing Node 30
         /// </summary>
         [Test]
-        public void Given3ElementInsertNewNodeAfterNOde30()
+        public void GivenThreeElement_InsertNewNode_AfterNOdeThirty()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(56);
@@ -114,7 +114,7 @@ namespace LinkedListTest
         /// Remove Middle Element
         /// </summary>
         [Test]
-        public void Given4NodeRemoveMiddleNode()
+        public void GivenFourNode_RemoveMiddleNode()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(56);
@@ -130,7 +130,7 @@ namespace LinkedListTest
         /// Sort Linked LIst in Increasing Order of Node
         /// </summary>
         [Test]
-        public void GivenLinkedListSortinIncreasingOrder()
+        public void GivenLinkedList_SortNode_IncreasingOrder()
         {
             LinkedList list = new LinkedList();
             Node firstNode = list.Add(56);
@@ -141,6 +141,19 @@ namespace LinkedListTest
             bool result = firstNode.next.Equals(thirdNode) && thirdNode.next.Equals(fourthNode);
             Assert.AreEqual(result, true);
 
+        }
+        /// <summary>
+        /// Create a Stack of the Three Element 56 30 70
+        /// </summary>
+        [Test]
+        public void CreateStack_OfThreeNode()
+        {
+            LinkedListStack stack = new LinkedListStack();
+            Node firstNode= stack.push(70);
+            Node secondNode= stack.push(30);
+            Node thirdNode=stack.push(56);
+            bool result = firstNode.data.Equals(70) && secondNode.data.Equals(30) && thirdNode.data.Equals(56);
+            Assert.AreEqual(result, true);
         }
     } 
 }
