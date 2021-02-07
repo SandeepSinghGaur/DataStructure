@@ -173,7 +173,9 @@ namespace LinkedListTest
                 result = false;
             Assert.AreEqual(result, true);
         }
-
+        /// <summary>
+        /// Create a Queue of Three Element
+        /// </summary>
         [Test]
         public void CreateAQueue_ofThreeElement()
         {
@@ -183,6 +185,25 @@ namespace LinkedListTest
             Node myThirdNode=queue.Enque(70);
             bool result = myFirstNode.data.Equals(56) && mySecondNode.data.Equals(30) && myThirdNode.data.Equals(70);
             Assert.AreEqual(result, true);
+        }
+        /// <summary>
+        /// Delete All the Element From the Queue
+        /// </summary>
+        [Test]
+        public void DeleteAllElementFromTheQueue()
+        {
+            LinkedListQueue queue = new LinkedListQueue();
+            queue.Enque(56);
+            queue.Enque(30);
+            queue.Enque(70);
+            queue.Dqueue();
+            bool result=false;
+            if (queue.head == null)
+            {
+                result = true;
+            }
+            Assert.AreEqual(result, true);
+
         }
     } 
 }

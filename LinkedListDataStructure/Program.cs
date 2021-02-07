@@ -28,20 +28,26 @@ namespace LinkedListDataStructure
             //Console.WriteLine("Check Element Present or not" + " " +checkElement);
             list.Display();
             Console.WriteLine();
-            LinkedListStack stack = new LinkedListStack();
-            stack.push(70);
-            stack.push(30);
-            stack.push(56);
-            stack.Peek();
-            stack.DisplayStack();
-            stack.Pop();
-            stack.DisplayStack();
-            stack.Is_Empty();
+            //LinkedListStack stack = new LinkedListStack();
+            //stack.push(70);
+            //stack.push(30);
+            //stack.push(56);
+            //stack.Peek();
+            //stack.DisplayStack();
+            //stack.Pop();
+            //stack.DisplayStack();
+            //stack.Is_Empty();
             LinkedListQueue queue = new LinkedListQueue();
             queue.Enque(56);
             queue.Enque(30);
             queue.Enque(70);
             queue.DisplayQueue();
+            queue.Dqueue();
+            queue.DisplayQueue();
+            if (queue.head == null)
+            {
+
+            }
         }
     }
 }
