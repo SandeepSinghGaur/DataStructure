@@ -18,12 +18,13 @@ namespace LinkedListDataStructure
             Node firstNode=list.Add(56);
             Node secondNode1 = list.Add(30);
            // Node secondNode=list.Append(56);
-            Node thirdNode=list.Add(40);
-            Node fourthNode = list.Add(70);
+            Node thirdNode=list.Add(70);
+            Node fourthNode = list.Add(80);
             //int position = list.SearchElement(40);
             //Program. checkElement = list.CheckElement(30);
-           // Node fifthNode=list.InsertAtPerticularPosition(position + 1, 40);
-            list.RemovePerticularNode(30);
+            // Node fifthNode=list.InsertAtPerticularPosition(position + 1, 40);
+            //list.RemovePerticularNode(30);
+            list.SortedLinkedList();
             //Console.WriteLine("Check Element Present or not" + " " +checkElement);
             list.Display();
         }

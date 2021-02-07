@@ -34,6 +34,11 @@ namespace LinkedListDataStructure
             Console.WriteLine("Element Inserted into Linked List"+" " + node.data);
             return node;
         }
+        /// <summary>
+        /// Append the Node after the Given Node
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public Node Append(int data)
         {
             Node node = new Node(data);
@@ -83,6 +88,12 @@ namespace LinkedListDataStructure
                 }
             }
         }
+        /// <summary>
+        /// Insert a Node Given Position of after the existing Node
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public Node InsertAtPerticularPosition(int position,int data)
         {
             if (position < 1)
@@ -121,6 +132,11 @@ namespace LinkedListDataStructure
                 return head;
             }
         }
+        /// <summary>
+        /// Check Element Present or Not
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public bool CheckElement(int data)
         {
             int count = 0;
@@ -136,6 +152,10 @@ namespace LinkedListDataStructure
                 }
             return false;
         }
+        /// <summary>
+        /// Remove First Node of LinkedList
+        /// </summary>
+        /// <returns></returns>
         public Node RemoveFirstNode()
         {
             if (this.head == null)
@@ -143,6 +163,10 @@ namespace LinkedListDataStructure
             this.head = this.head.next;
             return this.head;
         }
+        /// <summary>
+        /// Remove Last Node of The Linkedlist
+        /// </summary>
+        /// <returns></returns>
         public Node RemoveLastNode()
         {
             if (head == null)
@@ -160,7 +184,11 @@ namespace LinkedListDataStructure
             }
             newNode.next = null;
             return head;
-        }
+        }/// <summary>
+        /// Search a Perticular Node Present Or not
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public int SearchElement(int data)
         {
             int count = 0;
@@ -176,6 +204,11 @@ namespace LinkedListDataStructure
             }
             return count;
         }
+        /// <summary>
+        /// Reamove a Node From Middle of the LinkedList
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public Node RemovePerticularNode(int data)
         {
             if (head == null)
@@ -187,16 +220,41 @@ namespace LinkedListDataStructure
                 return null;
             }
             Node newNode = head;
-            while (newNode.next.next != null)
+            int i = 0;
+            while (newNode.next.next != null  && i<=0)
             {
+               
                 if (newNode.next.data == data)
                 {
+                    i++;
                     newNode.next = newNode.next.next;
                     break;
+                    
                 }
             }
 
             return newNode.next;
+        }
+        /// <summary>
+        /// implemented a Method Which Sort our LinkLIst Element
+        /// </summary>
+        public void SortedLinkedList()
+        {
+            if (head == null || head.next == null)
+                Console.WriteLine("Linked List already sorted");
+            Node newNode = head;
+            Node tempNode;
+            while (newNode.next != null)
+            {
+                if (newNode.data > newNode.next.data)
+                {
+                    tempNode = newNode.next.next; 
+                    newNode.next = tempNode;
+                    break;
+
+                }
+                
+            }
         }
 
     }
