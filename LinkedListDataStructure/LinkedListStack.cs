@@ -6,7 +6,7 @@ namespace LinkedListDataStructure
 {
   public  class LinkedListStack
     {
-        private Node top;
+        public Node top;
         /// <summary>
         /// Initialize top Node By using Constructore
         /// </summary>
@@ -43,6 +43,40 @@ namespace LinkedListDataStructure
             {
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
+            }
+        }
+        /// <summary>
+        /// Print  Peek Element of the stack 
+        /// </summary>
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            Console.WriteLine("Top Element :" + " " + this.top.data);
+        }
+        /// <summary>
+        /// Pop top Element of the Stack
+        /// </summary>
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Deletion is not Possible");
+            }
+            Console.WriteLine("Value Poped is :" + " " + this.top.data);
+            this.top = this.top.next;
+        }
+        /// <summary>
+        /// Remove all Element From the Stack
+        /// </summary>
+        public void Is_Empty()
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
             }
         }
     }

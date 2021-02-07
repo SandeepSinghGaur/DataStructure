@@ -155,5 +155,26 @@ namespace LinkedListTest
             bool result = firstNode.data.Equals(70) && secondNode.data.Equals(30) && thirdNode.data.Equals(56);
             Assert.AreEqual(result, true);
         }
+        /// <summary>
+        /// Pop the Element From The stack
+        /// </summary>
+        [Test]
+        public void PopAllElement_FromStack()
+        {
+            LinkedListStack stack = new LinkedListStack();
+            stack.push(70);
+            stack.push(30);
+            stack.push(56);
+            stack.Is_Empty();
+            bool result;
+            if (stack.top == null)
+                result = true;
+            else
+                result = false;
+            Assert.AreEqual(result, true);
+
+
+
+        }
     } 
 }
