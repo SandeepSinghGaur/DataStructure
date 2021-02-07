@@ -172,9 +172,17 @@ namespace LinkedListTest
             else
                 result = false;
             Assert.AreEqual(result, true);
+        }
 
-
-
+        [Test]
+        public void CreateAQueue_ofThreeElement()
+        {
+            LinkedListQueue queue = new LinkedListQueue();
+            Node myFirstNode=queue.Enque(56);
+            Node mySecondNode=queue.Enque(30);
+            Node myThirdNode=queue.Enque(70);
+            bool result = myFirstNode.data.Equals(56) && mySecondNode.data.Equals(30) && myThirdNode.data.Equals(70);
+            Assert.AreEqual(result, true);
         }
     } 
 }

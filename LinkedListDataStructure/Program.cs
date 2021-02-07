@@ -37,6 +37,11 @@ namespace LinkedListDataStructure
             stack.Pop();
             stack.DisplayStack();
             stack.Is_Empty();
+            LinkedListQueue queue = new LinkedListQueue();
+            queue.Enque(56);
+            queue.Enque(30);
+            queue.Enque(70);
+            queue.DisplayQueue();
         }
     }
 }
