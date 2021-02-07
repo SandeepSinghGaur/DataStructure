@@ -176,6 +176,28 @@ namespace LinkedListDataStructure
             }
             return count;
         }
+        public Node RemovePerticularNode(int data)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return null;
+            }
+            Node newNode = head;
+            while (newNode.next.next != null)
+            {
+                if (newNode.next.data == data)
+                {
+                    newNode.next = newNode.next.next;
+                    break;
+                }
+            }
+
+            return newNode.next;
+        }
 
     }
 }

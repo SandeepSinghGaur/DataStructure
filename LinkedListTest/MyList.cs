@@ -107,5 +107,18 @@ namespace LinkedListTest
                     fourthNode.next.Equals(secondNode) && secondNode.next.Equals(thirdNode);
             Assert.AreEqual(result, true);
         }
+        [Test]
+        public void Given4NodeRemoveMiddleNode()
+        {
+            LinkedList list = new LinkedList();
+            Node firstNode = list.Add(56);
+            Node secondNode1 = list.Add(30);
+            Node thirdNode = list.Add(40);
+            Node fourthNode = list.Add(70);
+            list.RemovePerticularNode(30);
+            bool result = firstNode.next.Equals(thirdNode) && thirdNode.next.Equals(fourthNode);
+            Assert.AreEqual(result, true);
+
+        }
     } 
 }
